@@ -58,10 +58,10 @@ const Contact = () => {
         
       </nav>
       {/*contact us */}
-      <div className="text-[28px] bg-gray-100">
+      <div className="text-[28px] bg-gray-200">
         <h1 className='ml-45 text-gray-600 cursor-pointer hover:text-gray-700 font-semibold transition-all'>Contact Us</h1>
       </div>
-      <div className="bg-gray-100 p-5">
+      <div className="bg-gray-200 p-5">
         <div className="max-w-6xl mx-auto bg-white p-6 shadow-lg rounded-lg">
           <h2 className="text-2xl font-semibold text-gray-800 border-b pb-2 mb-4">NIELIT Gorakhpur Centre</h2>
           <p className="text-gray-700 mb-4">
