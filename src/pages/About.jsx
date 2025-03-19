@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Team from '../components/Team';
 
 const About = () => {
   return (
@@ -15,8 +16,9 @@ const About = () => {
           <Link to="/contact" className="text-gray-200 hover:text-gray-50">Contact</Link>
         </div>
       </nav>
-      {/*about section*/}
-      
+      {/*about section open*/}
+      <Team/>
+      {/*about section close*/}
       <Footer />
     </div>
   )
