@@ -64,8 +64,8 @@ const Home = () => {
       
       <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {/* Step 1 */}
-        <div className="bg-white text-center p-6 border rounded-lg shadow-md hover:shadow-lg transition duration-300">
-          <div className="flex items-center justify-center mb-4">
+        <div className="bg-gray-50 text-center p-6 border rounded-lg shadow-md hover:shadow-2xl transition duration-300">
+          <div className="flex items-center justify-left mb-4">
             <span className="bg-gray-200 rounded-full px-3 py-1 text-lg font-bold">01</span>
           </div>
           <FaMobileAlt className="text-gray-600 text-7xl md:text-6xl mx-auto" />
@@ -74,8 +74,8 @@ const Home = () => {
         </div>
         
         {/* Step 2 */}
-        <div className="bg-white text-center p-6 border rounded-lg shadow-md hover:shadow-lg transition duration-300">
-          <div className="flex items-center justify-center mb-4">
+        <div className="bg-gray-50 text-center p-6 border rounded-lg shadow-md hover:shadow-2xl transition duration-300">
+          <div className="flex items-center justify-left mb-4">
             <span className="bg-gray-200 rounded-full px-3 py-1 text-lg font-bold">02</span>
           </div>
           <FaCalendarCheck className="text-gray-600 text-7xl md:text-6xl mx-auto" />
@@ -84,8 +84,8 @@ const Home = () => {
         </div>
         
         {/* Step 3 */}
-        <div className="bg-gray-50 text-center p-6 border rounded-lg shadow-md hover:shadow-lg transition duration-300">
-          <div className="flex items-center justify-center mb-4">
+        <div className="bg-gray-50 text-center p-6 border rounded-lg shadow-md hover:shadow-2xl transition duration-300">
+          <div className="flex items-center justify-left mb-4">
             <span className="bg-gray-200 rounded-full px-3 py-1 text-lg font-bold">03</span>
           </div>
           <FaClipboardCheck className="text-gray-600 text-7xl md:text-6xl mx-auto" />
