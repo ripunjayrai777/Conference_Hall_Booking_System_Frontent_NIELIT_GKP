@@ -125,7 +125,7 @@ const Home = () => {
         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center text-white px-4 sm:px-6">
           <h1 className="text-3xl sm:text-5xl font-bold mb-4">Book It!</h1>
           <p className="text-sm sm:text-lg max-w-md sm:max-w-2xl">
-            Your perfect venue for unforgettable events awaits you!
+            Your perfect venue for unforgettable events awaits you!!!
           </p>
           <div className="flex item-center justify-center text-center gap-5">
             <Link
