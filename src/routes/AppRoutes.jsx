@@ -8,6 +8,7 @@ import PrivateRoute from "./PrivateRoute";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
 import Booking from "../pages/Booking";
+import Availability from "../pages/Availability";
 
 const AppRoutes = () => {
   return (
@@ -19,11 +20,12 @@ const AppRoutes = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
         <Route path="/book" element={<Booking />} />
+        <Route path="/availability" element={<Availability />} />
 
         {/* Protected Routes */}
-        <Route element={<PrivateRoute role="admin" />}>
+        {/* <Route element={<PrivateRoute role="admin" />}> */}
           <Route path="/admin" element={<AdminDashboard />} />
-        </Route>
+        {/* </Route> */}
         <Route element={<PrivateRoute role="user" />}>
           <Route path="/user" element={<UserDashboard />} />
         </Route>
