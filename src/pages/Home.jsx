@@ -9,8 +9,7 @@ import { useNavigate } from "react-router-dom";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/autoplay";
+
 
 const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,10 +17,10 @@ const Home = () => {
 
 
   const heroImages = [
-    "https://demo.webdevia.com/uspace-locations-and-venues-listing-wordpress-theme/wp-content/uploads/2022/11/image-11-2.jpg",
-    "https://demo.webdevia.com/uspace-locations-and-venues-listing-wordpress-theme/wp-content/uploads/2022/11/image-11-6.jpg",
-    "https://demo.webdevia.com/uspace-locations-and-venues-listing-wordpress-theme/wp-content/uploads/2022/11/product-1.webp",
-    "https://demo.webdevia.com/uspace-locations-and-venues-listing-wordpress-theme/wp-content/uploads/2022/11/image-11-1.jpg",
+    "https://en.idei.club/uploads/posts/2023-08/thumbs/1691237395_en-idei-club-p-conference-room-design-ideas-dizain-pinter-40.jpg",
+    "https://en.idei.club/uploads/posts/2023-08/thumbs/1691237395_en-idei-club-p-conference-room-design-ideas-dizain-pinter-40.jpg",
+    "https://en.idei.club/uploads/posts/2023-08/thumbs/1691237395_en-idei-club-p-conference-room-design-ideas-dizain-pinter-40.jpg",
+    "https://en.idei.club/uploads/posts/2023-08/thumbs/1691237395_en-idei-club-p-conference-room-design-ideas-dizain-pinter-40.jpg",
   ];
 
 
@@ -30,19 +29,19 @@ const Home = () => {
       id: 1,
       title: "Beautiful Event Space",
       price: "INR 1999.00/ Hour",
-      image: "https://demo.webdevia.com/uspace-locations-and-venues-listing-wordpress-theme/wp-content/uploads/2022/11/image-11-2-490x490.jpg",
+      image: "https://demo.webdevia.com/uspace-locations-and-venues-listing-wordpress-theme/wp-content/uploads/2022/11/image-11-2.jpg",
     },
     {
       id: 2,
       title: "Cosy Modern Private SoHo Penthouse",
       price: "INR 2990.00/ Hour",
-      image: "https://demo.webdevia.com/uspace-locations-and-venues-listing-wordpress-theme/wp-content/uploads/2022/11/image-11-6-490x490.jpg",
+      image: "https://demo.webdevia.com/uspace-locations-and-venues-listing-wordpress-theme/wp-content/uploads/2022/11/product-1.webp",
     },
     {
       id: 3,
       title: "Charming Happy House in East Cobb",
       price: "INR 1990.00/ Hour",
-      image: "https://demo.webdevia.com/uspace-locations-and-venues-listing-wordpress-theme/wp-content/uploads/2022/11/product-1.webp",
+      image: "https://demo.webdevia.com/uspace-locations-and-venues-listing-wordpress-theme/wp-content/uploads/2022/11/image-11-6.jpg",
     },
     {
       id: 4,
@@ -100,53 +99,52 @@ const Home = () => {
         </div>
       </div> */}
 
+<div className="relative w-full min-h-[60vh] sm:min-h-[80vh] flex items-center justify-center text-center text-white">
+      {/* Swiper Background */}
+      <Swiper
+        modules={[Autoplay]}
+        autoplay={{ delay: 4000, disableOnInteraction: false }}
+        loop={true}
+        slidesPerView={1}
+        className="absolute inset-0 w-full h-full"
+      >
+        {heroImages.map((image, index) => (
+          <SwiperSlide key={index}>
+            <img
+              src={image}
+              alt={`Slide ${index + 1}`}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
 
-        {/* Hero Section with Carousel Background */}
-      <div className="relative w-full min-h-[60vh] sm:min-h-[80vh]">
-        {/* Swiper Background */}
-        <Swiper
-          modules={[Autoplay]}
-          autoplay={{ delay: 4000, disableOnInteraction: false }}
-          loop={true}
-          className="absolute inset-0 w-full h-full"
-        >
-          {heroImages.map((image, index) => (
-            <SwiperSlide key={index}>
-              <img
-                src={image}
-                alt={`Slide ${index + 1}`}
-                className="w-full h-full object-cover absolute inset-0"
-              />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+      {/* Overlay to Darken Background */}
+      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center text-white px-4 sm:px-6">
-          <h1 className="text-3xl sm:text-5xl font-bold mb-4">Book It!</h1>
-          <p className="text-sm sm:text-lg max-w-md sm:max-w-2xl">
-            Your perfect venue for unforgettable events awaits you!!!
-          </p>
-          <div className="flex item-center justify-center text-center gap-5">
-            <Link
-              to="/book"
-              className="mt-6 px-4 sm:px-6 py-2 sm:py-3 bg-red-500 hover:bg-gray-500 text-gray-100 hover:text-gray-50 rounded-md transition-all text-sm sm:text-base hover:shadow-2xl"
-            >
-              Book Now
-            </Link>
-            <Link
-              to="/availability"
-              className="mt-6 px-4 sm:px-6 py-2 sm:py-3 bg-green-600 hover:bg-gray-500 text-white hover:text-gray-50 rounded-md transition-all text-sm sm:text-base hover:shadow-2xl"
-            >
-              Check Availability
-            </Link>
-          </div>
+      {/* Hero Content */}
+      <div className="relative z-10 flex flex-col items-center justify-center px-4 sm:px-6">
+        <h1 className="text-3xl sm:text-5xl font-bold mb-4">Book It!</h1>
+        <p className="text-sm sm:text-lg max-w-md sm:max-w-2xl">
+          Your perfect venue for unforgettable events awaits you!
+        </p>
+        <div className="flex items-center justify-center gap-5 mt-6">
+          <Link
+            to="/book"
+            className="px-4 sm:px-6 py-2 sm:py-3 bg-red-500 hover:bg-gray-500 text-white rounded-md transition-all text-sm sm:text-base shadow-lg"
+          >
+            Book Now
+          </Link>
+          <Link
+            to="/availability"
+            className="px-4 sm:px-6 py-2 sm:py-3 bg-green-600 hover:bg-gray-500 text-white rounded-md transition-all text-sm sm:text-base shadow-lg"
+          >
+            Check Availability
+          </Link>
         </div>
       </div>
-
-
-
-     
+    </div>
+    
 
      {/* Feature Section */}
 
