@@ -186,7 +186,7 @@ const Home = () => {
       </div>
     </section>
 
-      {/* Popular Locations */}
+      {/* Popular Locations sections*/}
 
 
       <section className="py-16 bg-gray-200 text-center px-4 md:px-8 lg:px-16">
