@@ -5,8 +5,8 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { FaMobileAlt, FaCalendarCheck, FaClipboardCheck } from 'react-icons/fa';
 import { useNavigate } from "react-router-dom";
-
-
+import "swiper/css";
+import "swiper/css/autoplay";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 
@@ -18,9 +18,9 @@ const Home = () => {
 
   const heroImages = [
     "https://en.idei.club/uploads/posts/2023-08/thumbs/1691237395_en-idei-club-p-conference-room-design-ideas-dizain-pinter-40.jpg",
-    "https://en.idei.club/uploads/posts/2023-08/thumbs/1691237395_en-idei-club-p-conference-room-design-ideas-dizain-pinter-40.jpg",
-    "https://en.idei.club/uploads/posts/2023-08/thumbs/1691237395_en-idei-club-p-conference-room-design-ideas-dizain-pinter-40.jpg",
-    "https://en.idei.club/uploads/posts/2023-08/thumbs/1691237395_en-idei-club-p-conference-room-design-ideas-dizain-pinter-40.jpg",
+    "https://demo.webdevia.com/uspace-locations-and-venues-listing-wordpress-theme/wp-content/uploads/2022/11/image-11-2.jpg",
+    "https://demo.webdevia.com/uspace-locations-and-venues-listing-wordpress-theme/wp-content/uploads/2022/11/image-11-6.jpg",
+    "https://demo.webdevia.com/uspace-locations-and-venues-listing-wordpress-theme/wp-content/uploads/2022/11/product-1.webp",
   ];
 
 
@@ -87,64 +87,58 @@ const Home = () => {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      {/* <div className="flex flex-col items-center justify-center text-center bg-gray-200 text-gray-900 px-4 sm:px-6 py-20 sm:py-32 bg-opacity-50 min-h-[60vh] sm:min-h-[80vh]">
-        <h1 className="text-3xl sm:text-5xl font-bold mb-4">Book It!</h1>
-        <p className="text-sm sm:text-lg max-w-md sm:max-w-2xl">Your perfect venue for unforgettable events awaits you!</p>
-        <div className="flex item-center justify-center text-center gap-5">
-        <Link to="/book" className="mt-6 px-4 sm:px-6 py-2 sm:py-3 bg-red-500 hover:bg-gray-500 text-gray-100 hover:text-gray-50 rounded-md transition-all text-sm sm:text-base hover:shadow-2xl">Book Now</Link>
-        <Link to="/availability" 
-        className="mt-6 px-4 sm:px-6 py-2 sm:py-3 bg-green-600 hover:bg-gray-500 text-white hover:text-gray-50 rounded-md transition-all text-sm sm:text-base hover:shadow-2xl"
-        >Check Availability</Link>
-        </div>
-      </div> */}
 
-<div className="relative w-full min-h-[60vh] sm:min-h-[80vh] flex items-center justify-center text-center text-white">
-      {/* Swiper Background */}
-      <Swiper
-        modules={[Autoplay]}
-        autoplay={{ delay: 4000, disableOnInteraction: false }}
-        loop={true}
-        slidesPerView={1}
-        className="absolute inset-0 w-full h-full"
+    {/*Crousel Section*/}
+
+    <div className="relative w-full min-h-[60vh] sm:min-h-[80vh] flex items-center justify-center text-center text-white">
+  {/* Swiper Background */}
+  <div className="absolute inset-0 w-full h-full">
+    <Swiper
+      modules={[Autoplay]}
+      autoplay={{ delay: 4000, disableOnInteraction: false }}
+      loop={true}
+      slidesPerView={1}
+      className="w-full h-full"
+    >
+      {heroImages.map((image, index) => (
+        <SwiperSlide key={index}>
+          <img
+            src={image}
+            alt={`Slide ${index + 1}`}
+            className="w-full h-full object-cover"
+          />
+        </SwiperSlide>
+      ))}
+    </Swiper>
+
+    {/* Overlay to Darken Background */}
+    <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+  </div>
+
+  {/* Hero Content - Stays Centered */}
+  <div className="relative z-10 flex flex-col items-center justify-center px-4 sm:px-6">
+    <h1 className="text-3xl sm:text-5xl font-bold mb-4">Book It!</h1>
+    <p className="text-sm sm:text-lg max-w-md sm:max-w-2xl">
+      Your perfect venue for unforgettable events awaits you!
+    </p>
+    <div className="flex items-center justify-center gap-5 mt-6">
+      <Link
+        to="/book"
+        className="px-4 sm:px-6 py-2 sm:py-3 bg-red-500 hover:bg-gray-500 text-white rounded-md transition-all text-sm sm:text-base shadow-lg"
       >
-        {heroImages.map((image, index) => (
-          <SwiperSlide key={index}>
-            <img
-              src={image}
-              alt={`Slide ${index + 1}`}
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-
-      {/* Overlay to Darken Background */}
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-
-      {/* Hero Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center px-4 sm:px-6">
-        <h1 className="text-3xl sm:text-5xl font-bold mb-4">Book It!</h1>
-        <p className="text-sm sm:text-lg max-w-md sm:max-w-2xl">
-          Your perfect venue for unforgettable events awaits you!
-        </p>
-        <div className="flex items-center justify-center gap-5 mt-6">
-          <Link
-            to="/book"
-            className="px-4 sm:px-6 py-2 sm:py-3 bg-red-500 hover:bg-gray-500 text-white rounded-md transition-all text-sm sm:text-base shadow-lg"
-          >
-            Book Now
-          </Link>
-          <Link
-            to="/availability"
-            className="px-4 sm:px-6 py-2 sm:py-3 bg-green-600 hover:bg-gray-500 text-white rounded-md transition-all text-sm sm:text-base shadow-lg"
-          >
-            Check Availability
-          </Link>
-        </div>
-      </div>
+        Book Now
+      </Link>
+      <Link
+        to="/availability"
+        className="px-4 sm:px-6 py-2 sm:py-3 bg-green-600 hover:bg-gray-500 text-white rounded-md transition-all text-sm sm:text-base shadow-lg"
+      >
+        Check Availability
+      </Link>
     </div>
-    
+  </div>
+</div>
+
+
 
      {/* Feature Section */}
 
