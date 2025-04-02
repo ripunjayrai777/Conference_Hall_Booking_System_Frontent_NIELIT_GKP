@@ -7,9 +7,9 @@ import Footer from "../components/Footer";
 
 const Booking = () => {
   const [halls, setHalls] = useState([
-    { id: 1, name: "Auditorium A", image: "auditorium_a.jpg", capacity: 200, features: ["Projector", "Sound System", "WiFi"] },
-    { id: 2, name: "Conference Room B", image: "conference_b.jpg", capacity: 50, features: ["Whiteboard", "Video Conferencing"] },
-    { id: 3, name: "Seminar Hall C", image: "seminar_c.jpg", capacity: 100, features: ["AC", "Podium", "Microphones"] }
+    { id: 1, name: "Auditorium A", image: "https://en.idei.club/uploads/posts/2023-08/thumbs/1691237395_en-idei-club-p-conference-room-design-ideas-dizain-pinter-40.jpg", capacity: 200, features: ["Projector", "Sound System", "WiFi"] },
+    { id: 2, name: "Conference Room B", image: "https://demo.webdevia.com/uspace-locations-and-venues-listing-wordpress-theme/wp-content/uploads/2022/11/image-11-2.jpg", capacity: 50, features: ["Whiteboard", "Video Conferencing"] },
+    { id: 3, name: "Seminar Hall C", image: "https://demo.webdevia.com/uspace-locations-and-venues-listing-wordpress-theme/wp-content/uploads/2022/11/image-11-6.jpg", capacity: 100, features: ["AC", "Podium", "Microphones"] }
   ]);
   const [selectedHall, setSelectedHall] = useState(null);
   const [date, setDate] = useState("");
