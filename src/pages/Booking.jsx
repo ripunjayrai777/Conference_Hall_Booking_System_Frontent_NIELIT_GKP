@@ -1,5 +1,3 @@
-
-
 //new phase of booking page , preview feature of selected hall added--------------------------------------------------------
 import React, { useState } from "react";
 import Header from "../components/Header";
@@ -110,3 +108,4 @@ const Booking = () => {
 };
 
 export default Booking;
+//dd
